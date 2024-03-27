@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400&800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  @apply font-cairo;
+}
+header {
+  @apply p-4 px-6 sm:px-12 sm:py-6 lg:px-16 xl:px-24 lg:text-lg sm:flex sm:justify-between;
+}
+header {
+  @apply flex justify-between items-center  bg-primary;
+}
+header nav {
+  @apply absolute bottom-0 right-[-100%] duration-300 h-0 w-full flex flex-col items-center p-4 px-6 sm:p-0 md:py-8 bg-white sm:bg-transparent pt-6 z-10;
+}
+
+header nav.show {
+  @apply right-0 h-1/2;
+}
+header img {
+  @apply h-auto w-8 cursor-pointer sm:hidden md:h-[32rem] lg:h-[40rem];
+}
+header nav ul {
+  @apply list-none no-underline;
+}
+header nav > img {
+  @apply mb-2;
+}
+header nav ul > * {
+  @apply bg-primary text-black py-2 px-4 w-full rounded-sm text-center mt-3;
+}
+@media (min-width: 640px) {
+  header nav {
+    @apply static right-0 bottom-0 h-auto p-0;
+  }
+  header nav ul {
+    @apply flex flex-row w-auto pl-8;
+  }
+  header nav ul li {
+    @apply mt-0 mr-3 lg:mr-6 p-0 w-auto text-right;
+  }
+}
+main .heroSection {
+  @apply p-8 px-10 sm:p-12 lg:p-16 sm:text-lg text-center  text-white bg-cover bg-no-repeat relative;
+  background-image: url("./assets/doctor_s-headphone.webp");
+  background-position: 50%;
+}
+main .heroSection p {
+  @apply z-10 text-lg relative md:font-bold md:text-2xl lg:text-3xl;
+}
+main .heroSection span {
+  @apply absolute top-0 right-0 w-full h-full;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+main > div > img {
+  @apply w-full rounded-[10px] md:h-[30rem] lg:h-[35rem] xl:h-[40rem];
+  object-fit: cover;
+}
+main > div section {
+  @apply md:flex justify-between items-center flex-row-reverse;
+}
+main > div section > img {
+  object-fit: cover;
+  @apply w-full h-[13rem] rounded-xl sm:h-[29rem] md:h-[26rem] lg:h-[30rem] md:w-1/2;
+}
+main > div section h2 {
+  @apply text-xl mt-9;
+}
+main > div section li,
+main > div section h2 {
+  @apply flex mb-5 items-center;
+}
+main > div section li img,
+main > div section h2 img {
+  @apply w-6 ml-1;
+}
+main > div section ul.phoneNumbers li img {
+  @apply ml-4;
+}
